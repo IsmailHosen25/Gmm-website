@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100;1,100&family=Poppins:wght@300&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    font-size: 10px;
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+}
+/* *********************Navigation var Start********************* */
+nav{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    position: relative;
+    background-color: #fff;
+    position: fixed;
+    top:0px;
+}
+nav .in-nav{
+    width:90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+                                /* logo S */
+nav .in-nav .logo{
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .in-nav .logo img{
+ width:5rem;
+ height:5rem;
+ border-radius: 50%;
+ cursor: pointer;
+}
+nav .in-nav .logo h3{
+   font-size: 3rem;
+   text-align: center;
+   cursor: pointer;
+   margin-left: 0.5rem;
+}
+                                /* logo E */
+
+                               /* Search S */ 
+nav .in-nav .ser{
+    width:40%;
+    position: relative;
+}
+nav .in-nav .ser input{
+    width: 100%;
+    height: 100%;
+    padding:0.5rem 1rem;
+    padding-left: 3.2rem;
+    border-radius: 50px;
+    outline: none;
+    background-color: transparent;
+}
+nav .in-nav .ser span{
+    position:absolute;
+    font-size: 1.3rem;
+    top:7px;
+    left:35px;
+    transition: all 0.3s ease-in-out;
+    cursor:text;
+    pointer-events: none;
+}
+nav .in-nav .ser input:focus ~ span{
+    top:-9px;
+    background-color: #fff;
+}
+nav .in-nav .ser .ser-btn i{
+    font-size: 2rem;
+    position: absolute;
+    left: 10px;
+    top:8px;
+    z-index: 10;
+    color: black;
+    cursor: pointer;
+}
+nav .in-nav .ser .ser-btn:focus ~ span{
+    top:-9px;
+    background-color: #fff;
+}
+
+                               /* Search E */ 
+
+                               /* Ul Start */
+nav .in-nav > ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+nav .in-nav ul > li:not(:last-child){
+    margin-right: 2rem;
+}
+nav .in-nav ul > li{
+    position: relative;
+    padding:0.5rem 1rem;
+}
+nav .in-nav ul li > a{
+    width: 100%;
+    height: 100%;
+    color:black;
+    text-decoration: none;
+    font-size: 1.8rem;
+    transition: background-color 0.3s ease-in;
+}
+nav .in-nav ul > li:hover{
+ background-color:#ecf0f1 ;
+ color:#000;
+}
+nav .in-nav ul li ul{
+    background-color: #fff;
+    position: absolute;
+    left: 0px;
+    top:38px;
+    z-index: 999;
+    height: 0px;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+}
+nav .in-nav ul li ul li{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .in-nav ul li ul li a{
+ text-align: left;
+}
+nav .in-nav ul li:hover ul{
+    height: auto;
+    visibility:visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+/* nav .in-nav ul li .prod-active{
+    height: auto;
+    visibility:visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+} */
+                               /* Ul E */ 
+
+                               /* manu-icon S */
+nav .in-nav .manu-icon{
+    display:none;
+    font-size: 2.8rem;
+}
+                               /* manu-icon E */
+/* *********************Navigation var End********************* */
+
+
+
+/* ************************************************************************************************************************** */
+/* ****************************************************Media Query Start***************************************************** */
+/* ************************************************************************************************************************** */
+   
+                          /* ********************* min-width: 1201px ********************* */
+@media screen and (min-width:1201px){
+    
+}
+
+                         /* ********************* max-width: 1200px ********************* */
+@media screen and (max-width:1200px){
+    nav .in-nav .ser{
+        width:33%;
+        position: relative;
+    }
+
+}
+
+                        /* ********************* max-width: 1024px ********************* */
+@media screen and (max-width:1024px){
+    nav .in-nav > ul{
+        background-color: antiquewhite;
+        padding: 1rem;
+        display:block;
+        position: absolute;
+        top:50px;
+        right: 0px;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+    nav .in-nav .ul-respons{
+        transform: translateX(0%);
+    }
+    nav .in-nav ul li{
+        width: 100%;
+    }
+    nav .in-nav ul li a{
+        display: block;
+        width: 100%;
+        text-align: right;
+    }
+    nav .in-nav ul li:not(:last-child){
+        margin-bottom: 2rem;
+    }
+    nav .in-nav ul li a{
+        text-align: center;
+    }
+    nav .in-nav .manu-icon{
+        display: inline;
+    }
+    nav .in-nav .ser{
+        width:50%;
+        position: relative;
+    }
+}
+
+                        /* ********************* max-width: 768px ********************* */
+@media screen and (max-width:768px){
+}
+
+                        /* ********************* max-width: 480px ********************* */
+@media screen and (max-width:480px){
+    nav .content{
+        justify-content: space-between;
+    }
+    nav .in-nav .logo{
+        margin-bottom: 1.5rem;
+        width: 100%;
+    }
+    nav .in-nav .ser{
+        width:80%;
+        position: relative;
+    }
+    nav .in-nav ul{
+        top:110px;
+    }
+}
+/* ************************************************************************************************************************** */
+/* *****************************************************Media Query End****************************************************** */
+/* ************************************************************************************************************************** */
