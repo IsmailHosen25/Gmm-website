@@ -8,9 +8,11 @@
 html{
     font-size: 10px;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 body{
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 /* *********************Navigation var Start********************* */
 nav{
@@ -20,7 +22,6 @@ nav{
     align-items: center;
     background-color: #fff;
     padding: 0.3rem 0;
-    overflow: hidden;
 }
 nav .in-nav{
     width:90%;
@@ -122,7 +123,7 @@ nav .in-nav ul li > a{
     color:black;
     text-decoration: none;
     font-size: 1.8rem;
-    transition: background-color 0.3s ease-in;
+    transition: background-color 0.3s linear;
 }
 nav .in-nav ul > li:hover{
  background-color:#ecf0f1 ;
@@ -175,7 +176,7 @@ nav .in-nav .manu-icon{
 .banar{
     overflow: hidden;
     width:100%;
-    height: 100vh;
+    height: 80vh;
     background-image: url("image/gmmbanar.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -254,9 +255,30 @@ padding:2rem 5rem;
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    width: fit-content;
+    margin: auto;
+    position: relative;
 }
-
-
+.product .heading::after{
+    content: "";
+    width: 50%;
+    color: #000;
+    border: 1px solid #000;
+    background-color: #000;
+    position: absolute;
+    top:50%;
+    right: -55%;
+}
+.product .heading::before{
+    content: "";
+    width: 50%;
+    color: #000;
+    border: 1px solid #000;
+    background-color: #000;
+    position: absolute;
+    top:50%;
+    left: -55%;
+}
 
                             /*  Card body  */
 
@@ -279,8 +301,9 @@ padding:2rem 5rem;
 .product .card-body .product-category{
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    cursor: pointer;
+    width: fit-content;
 }
-
 
                                  /* Main container */
 
@@ -394,9 +417,182 @@ padding:2rem 5rem;
     color: #fff;
 }
 
+          /* *********************************Contect Section Start****************************************** */
+
+.contact-body{
+    background-color: #2c3e50;
+    width: 100%;
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.contact-body  .in-contact{
+    width: 90%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-body  .in-contact .heading{
+    text-align: center;
+    font-size: 1.5rem;
+    width: 70%;
+    margin-bottom: 3rem;
+} 
+.contact-body  .in-contact .heading h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.contact-body  .in-contact .heading p{
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+                          /* ***********Main Body************* */
+.contact-body  .in-contact .main-body{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+}                       /* ***********Main Body left************* */
 
 
 
+.contact-body  .in-contact .main-body .main-body-left{
+    width: 45%;
+}
+
+
+                          /* ***********icon-container************* */
+
+
+.contact-body  .in-contact .main-body .main-body-left .icon-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.contact-body  .in-contact .main-body .main-body-left .icon-container:not(:last-child){
+    margin-bottom: 3rem;
+}
+
+
+                          /* ***********icon************* */
+
+
+.contact-body  .in-contact .main-body .main-body-left .icon-container .icon{
+    width:4rem;
+    height:4rem;
+    background-color: #fff;
+    color: #000;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.contact-body  .in-contact .main-body .main-body-left .icon-container .icon i{
+    font-size: 2.3rem;
+}
+
+                          /* ***********Para************* */
+.contact-body  .in-contact .main-body .main-body-left .icon-container .para{
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+.contact-body  .in-contact .main-body .main-body-left .icon-container .para h4{
+    color:#1e90ff;
+}
+
+
+                          /* *****************Form****************** */
+
+
+.contact-body  .in-contact .main-body form{
+       width: 45%;
+       padding: 3rem;
+       background-color: #fff;
+       color: #000;
+}
+.contact-body  .in-contact .main-body form h2{
+  font-size: 3rem;
+  font-weight: 500;
+  color: #000;
+}
+
+                          /* *****************Input Box****************** */
+.contact-body  .in-contact .main-body form .input-box{
+    margin-top: 1rem;
+    width: 100%;
+    position: relative;
+}
+.contact-body  .in-contact .main-body form .input-box input , textarea{
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    margin:1rem 0 ;
+    border: none;
+    border-bottom:2px solid #000 ;
+    outline: none;
+    resize: none;
+}
+.contact-body  .in-contact .main-body form .input-box span{
+    position: absolute;
+    left: 0;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    margin:1rem 0 ;
+    pointer-events: none;
+    transition: 0.5s;
+    color:#666;
+}
+.contact-body  .in-contact .main-body form .input-box input:focus ~ span,
+.contact-body  .in-contact .main-body form .input-box input:valid ~ span{
+    font-size: 1.2rem;
+    color:#e91963;
+    transform: translateY(-20px);
+}
+.contact-body  .in-contact .main-body form .input-box textarea:focus ~ span,
+.contact-body  .in-contact .main-body form .input-box textarea:valid ~ span{
+    font-size: 1.2rem;
+    color:#e91963;
+    transform: translateY(-20px);
+}
+.contact-body  .in-contact .main-body form .submit-btn-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+                          /* *****************Submit Button****************** */
+
+
+.contact-body  .in-contact .main-body form .input-box input[type="submit"]{
+    width: 90%;
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1.5rem;
+    transition: all 0.3s linear;
+}
+.contact-body  .in-contact .main-body form .input-box input[type="submit"]:hover{
+    background-color: transparent;
+    outline: 1px solid #000;
+    color: #000;
+}
+
+        /* *********************************Contect Section End****************************************** */
 
 /* *********************Product Section End********************* */
 /* ************************************************************************************************************************** */
@@ -474,6 +670,16 @@ padding:2rem 5rem;
         visibility: hidden;
         opacity: 0;
     }
+    .contact-body  .in-contact .main-body .main-body-left{
+        width: 40%;
+    }
+    .contact-body{
+        padding: 3rem 0rem;
+    }
+    
+    .contact-body  .in-contact{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width:950px){
@@ -502,9 +708,39 @@ padding:2rem 5rem;
     .product {
        padding: 2rem 2rem;
     }
+    .product .heading::after{
+        width: 23%;
+        right: -27%;
+    }
+    .product .heading::before{
+        width: 23%;
+        left: -27%;
+    }
+    
     .product .card-body .main-container .product-continer{
         width: 47%;
         height: 40rem;
+    }
+    .contact-body{
+        padding: 3rem 2rem;
+    }
+    
+    .contact-body  .in-contact{
+        width: 95%;
+    }
+    .contact-body  .in-contact .heading{
+        width: 80%;
+    } 
+    .contact-body  .in-contact .main-body{
+        justify-content: center;
+      
+      }  
+    .contact-body  .in-contact .main-body .main-body-left{
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+    .contact-body  .in-contact .main-body form{
+        width: 100%;
     }
 
 }
@@ -546,10 +782,32 @@ padding:2rem 5rem;
     .banar .content .wrapper .dynamic-text li{
         font-size: 2.5rem;
     }
+    .product .heading{
+        text-align: center;
+        font-size: 2rem;
+    }
+    .product .heading::after{
+        width: 20%;
+        right: -25%;
+    }
+    .product .heading::before{
+        width: 20%;
+        left: -25%;
+    }
+    .product .card-body .product-category{
+        font-size: 2rem;
+    }
    .product .card-body .main-container .product-continer{
     width: 90%;
     height: 40rem;
-}
+   }
+   .contact-body{
+    padding: 3rem 0rem;
+   }
+
+   .contact-body  .in-contact{
+    width: 100%;
+    }
 }
 /* ************************************************************************************************************************** */
 /* *****************************************************Media Query End****************************************************** */

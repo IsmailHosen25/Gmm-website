@@ -22,7 +22,7 @@ manu_icon.addEventListener("click",function(){
 //     let prod_ul=document.getElementById("prod-ul") //id='prod-ul'
 //     prod_ul.classList.toggle("prod-active");
 // }
-//////////////////////
+// ////////////////////
 
 
 // -------------------------------------------Navigation var End--------------------------------------------------------- //
