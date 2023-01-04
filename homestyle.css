@@ -18,11 +18,9 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
-    position: relative;
     background-color: #fff;
-    position: fixed;
-    top:0px;
+    padding: 0.3rem 0;
+    overflow: hidden;
 }
 nav .in-nav{
     width:90%;
@@ -50,6 +48,15 @@ nav .in-nav .logo h3{
    cursor: pointer;
    margin-left: 0.5rem;
 }
+nav .in-nav .logo h3 .logo-s1{
+   color:#e74c3c;
+ }
+ nav .in-nav .logo h3 .logo-s2{
+    color:#1e90ff;
+ }
+ nav .in-nav .logo h3 .logo-s3{
+     color:#eccc68;
+ }
                                 /* logo E */
 
                                /* Search S */ 
@@ -164,15 +171,242 @@ nav .in-nav .manu-icon{
 /* *********************Navigation var End********************* */
 
 
+/* *********************Body Bannar Start********************* */
+.banar{
+    overflow: hidden;
+    width:100%;
+    height: 100vh;
+    background-image: url("image/gmmbanar.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10rem;
+}
+.banar .content{
+    width:70%;
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+.banar .content .wrapper{
+    display: block;
+}
+.banar .content .wrapper .static-text{
+    color:#e74c3c;
+    font-size: 4rem;
+    font-weight: 400;
+}
+.banar .content .wrapper .dynamic-text{
+    overflow: hidden;
+}
+.banar .content .wrapper .dynamic-text li{
+     list-style: none;
+     color:#1e90ff;
+     font-size: 4rem;
+     font-weight: 500;
+     position: relative;
+}
+.banar .content .wrapper .dynamic-text li::after{
+    content: "";
+    position: absolute;
+    left:0px;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    border-left: 2px solid #1e90ff;
+    animation: typing 3s steps(18) infinite;
+}
+@keyframes typing {
+    40%,60%{
+         left:calc(100% + 30px)
+    }
+    100%{
+        left: 0;
+    }
+}
+.banar .content p{
+    width: 80%;
+    font-size: 1.5rem;
+}
 
+
+
+/* *********************Body Bannar End********************* */
+
+/* *********************Product Section Start********************* */
+.product{
+display: flex;
+flex-direction: column;
+padding:2rem 5rem;
+} 
+
+
+
+                           /* Product Heading */
+
+
+
+.product .heading{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+
+
+                            /*  Card body  */
+
+
+
+
+.product .card-body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+                               /* Product Category */
+
+
+
+
+.product .card-body .product-category{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+
+                                 /* Main container */
+
+
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+
+                                     /* Product Container */
+
+
+
+.product .card-body .main-container .product-continer{
+    width: 23.5%;
+    height: 45rem;
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    margin-bottom: 3rem;
+    border: 1px solid #000;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 0.8rem;
+}
+.product .card-body .main-container  .product-continer:hover{
+    transform: scale(1.1);
+}
+
+
+                                   /* Product Image */
+
+
+.product .card-body .main-container  .product-continer .product-image{
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1rem;
+}
+.product .card-body .main-container  .product-continer .product-image img{
+    width: 100%;
+    height: 100%;
+}
+.product .card-body .main-container  .product-continer .product-image button{
+    position: absolute;
+    bottom:20px;
+    left: 30px;
+    width: 80%;
+    padding: 0.5rem ;
+    z-index: 999;
+    background-color:transparent ;
+    color: #fff;
+    border: 1px solid #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 50px;
+    transition: background-color 0.3s ease-in-out;
+}
+.product .card-body .main-container  .product-continer .product-image button:hover{
+    background-color:#1e90ff;
+}
+.product .card-body .main-container  .product-continer:hover button{
+   opacity: 1;
+}
+.product .card-body .main-container  .product-continer  .product-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 0.5rem;
+}
+
+
+
+                                   /* Product Info */
+
+
+
+.product .card-body .main-container  .product-continer  .product-info .product-info-left{
+    width: 70%;
+    font-size: 1.5rem;
+}
+.product .card-body .main-container  .product-continer  .product-info .product-info-right{
+    width: 30%;
+    font-size: 1.3rem;
+}
+.product .card-body .main-container  .product-continer  .product-info .product-info-right p:last-child{
+    font-size: 1rem;
+}
+
+
+                                     /* See All button */
+
+
+.product .card-body .main-container .see-all button{
+   padding:0.5rem 2rem;
+   background-color: #fff;
+   cursor: pointer;
+   border: 1px solid black;
+   transition-property: backgorund-color,color;
+   transition: 0.3s ease-in-out;
+}
+.product .card-body .main-container .see-all button:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+
+
+/* *********************Product Section End********************* */
 /* ************************************************************************************************************************** */
 /* ****************************************************Media Query Start***************************************************** */
 /* ************************************************************************************************************************** */
    
                           /* ********************* min-width: 1201px ********************* */
-@media screen and (min-width:1201px){
+/* @media screen and (min-width:1201px){
     
-}
+} */
 
                          /* ********************* max-width: 1200px ********************* */
 @media screen and (max-width:1200px){
@@ -180,26 +414,35 @@ nav .in-nav .manu-icon{
         width:33%;
         position: relative;
     }
+    .product .card-body .main-container .product-continer{
+        width: 30%;
+    }
 
 }
 
                         /* ********************* max-width: 1024px ********************* */
 @media screen and (max-width:1024px){
     nav .in-nav > ul{
-        background-color: antiquewhite;
+        background-color: #fff;
         padding: 1rem;
         display:block;
         position: absolute;
-        top:50px;
+        top:56px;
         right: 0px;
         width: 100%;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
+        transform: translateX(-100%);
+        transition: all 0.3s linear;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 999;
     }
     nav .in-nav .ul-respons{
         transform: translateX(0%);
+        opacity: 0.9;
+        visibility: visible;
+        transition: transform 0.3s linear;
     }
-    nav .in-nav ul li{
+    nav .in-nav ul > li{
         width: 100%;
     }
     nav .in-nav ul li a{
@@ -220,15 +463,56 @@ nav .in-nav .manu-icon{
         width:50%;
         position: relative;
     }
+    nav .in-nav ul li ul{
+        background-color: #fff;
+        position: absolute;
+        top:38px;
+        left:58%;
+        z-index: 999;
+        height: 0px;
+        width: 30%;
+        visibility: hidden;
+        opacity: 0;
+    }
 }
+
+@media screen and (max-width:950px){
+    .product .card-body .main-container{
+        justify-content: space-around;
+    }
+    .product .card-body .main-container .product-continer{
+        width: 40%;
+        height: 44rem;
+    }
+}
+
 
                         /* ********************* max-width: 768px ********************* */
 @media screen and (max-width:768px){
+    nav .in-nav ul li ul{
+        left:64%;
+    }
+    .banar .content{
+        width: 92%;
+    }
+    .banar{
+        background-size: cover;
+        padding: 2rem;
+    }
+    .product {
+       padding: 2rem 2rem;
+    }
+    .product .card-body .main-container .product-continer{
+        width: 47%;
+        height: 40rem;
+    }
+
 }
 
                         /* ********************* max-width: 480px ********************* */
 @media screen and (max-width:480px){
     nav .content{
+        width: 95%;
         justify-content: space-between;
     }
     nav .in-nav .logo{
@@ -240,8 +524,32 @@ nav .in-nav .manu-icon{
         position: relative;
     }
     nav .in-nav ul{
-        top:110px;
+        top:125px;
     }
+    nav .in-nav ul li ul{
+        left:70%;
+    }
+    .banar{
+        background-size: cover;
+    }
+    .banar .content{
+        width: 95%;
+    }
+    .banar{
+        padding-left: 1.5rem;
+    }
+    .banar .content .wrapper .static-text{
+        color:#e74c3c;
+        font-size: 2.5rem;
+        font-weight: 400;
+    }
+    .banar .content .wrapper .dynamic-text li{
+        font-size: 2.5rem;
+    }
+   .product .card-body .main-container .product-continer{
+    width: 90%;
+    height: 40rem;
+}
 }
 /* ************************************************************************************************************************** */
 /* *****************************************************Media Query End****************************************************** */
