@@ -252,12 +252,21 @@ nav .in-nav .manu-icon{
 }
 .up-icon::after{
     content: "";
-    width: 100%;
+    width: 95%;
     height: 2px;
     color: #000;
     background-color: #000;
     position: absolute;
     bottom: 0px;
+}
+.up-icon::before{
+    content: "";
+    width: 95%;
+    height: 1px;
+    color: #000;
+    background-color: #000;
+    position: absolute;
+    bottom: -10px;
 }
 .up-icon a i{
     font-size: 2.5rem;
