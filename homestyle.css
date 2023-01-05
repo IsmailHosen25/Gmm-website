@@ -238,6 +238,56 @@ nav .in-nav .manu-icon{
 
 /* *********************Body Bannar End********************* */
 
+
+
+/* *********************Up icon Start********************* */
+.up-icon{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 999;
+}
+.up-icon::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    color: #000;
+    background-color: #000;
+    position: absolute;
+    bottom: 0px;
+}
+.up-icon a i{
+    font-size: 2.5rem;
+    color: #000;
+}
+
+/* *********************Up icon End********************* */
+
+
+/* *********************Messanger icon Start********************* */
+.facebook-icon{
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    background-color: #fff;
+    width: 5.7rem;
+    height: 5.7rem;
+    border-radius: 50%;
+}
+.facebook-icon a i{
+    font-size: 6rem;
+    color:#1e90ff;
+ }
+/* *********************Messanger icon End********************* */
+
 /* *********************Product Section Start********************* */
 .product{
 display: flex;
@@ -416,7 +466,7 @@ padding:2rem 5rem;
     background-color: #000;
     color: #fff;
 }
-
+        /* *********************Product Section End********************* */
           /* *********************************Contect Section Start****************************************** */
 
 .contact-body{
@@ -594,7 +644,87 @@ padding:2rem 5rem;
 
         /* *********************************Contect Section End****************************************** */
 
-/* *********************Product Section End********************* */
+
+        /* *********************About us start********************* */
+
+.about-container{
+    width: 100%;
+    padding: 4rem;
+    overflow: hidden;
+}
+.about-container .heading{
+    width: fit-content;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    color:#badc58;
+    margin: auto;
+    position: relative;
+}
+.about-container .heading::after{
+    content: " ";
+     width: 60%;
+     border: 1px solid #badc58;
+     background-color: #badc58;
+     color: #badc58;
+     position: absolute;
+     bottom: 0px;
+     right: 20%;
+}
+.about-container .body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 3rem;
+}
+.about-container .body .para{
+    width:70%;
+    text-align: center;
+    overflow: hidden;
+}
+.about-container .body .para .in-para{
+    font-size: 1.5rem;
+}
+.about-container .body .para button{
+    font-size: 1.6rem;
+    margin: 2rem 0rem;
+    background-color: #badc58;
+    color:#fff;
+    padding: 0.5rem 2.3rem;
+    border: none;
+    border-radius: 25px;
+    height: auto;
+}
+.about-container .body .para .down-para{
+    visibility: hidden;
+    height: 0;
+    transition: height 0.5s ease-in-out;
+}
+.about-container .body .para .down-para-active{
+    color: #000;
+    height: auto;
+    visibility: visible;
+}
+.social-media{
+    padding: 0.5rem;
+    overflow: hidden;
+    margin-top: 5rem;
+    width: 15rem;
+    font-size: 3rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.social-media i{
+    color:#ff6b6b;
+}
+/* *********************About Us End********************* */
+
+
 /* ************************************************************************************************************************** */
 /* ****************************************************Media Query Start***************************************************** */
 /* ************************************************************************************************************************** */
@@ -742,6 +872,9 @@ padding:2rem 5rem;
     .contact-body  .in-contact .main-body form{
         width: 100%;
     }
+    .about-container .body .para{
+        width:80%;
+    }
 
 }
 
@@ -760,7 +893,7 @@ padding:2rem 5rem;
         position: relative;
     }
     nav .in-nav ul{
-        top:125px;
+        top:110px;
     }
     nav .in-nav ul li ul{
         left:70%;
@@ -808,6 +941,10 @@ padding:2rem 5rem;
    .contact-body  .in-contact{
     width: 100%;
     }
+    .about-container .body .para{
+        width:90%;
+    }
+
 }
 /* ************************************************************************************************************************** */
 /* *****************************************************Media Query End****************************************************** */

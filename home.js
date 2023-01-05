@@ -17,6 +17,16 @@ manu_icon.addEventListener("click",function(){
     ul.classList.toggle("ul-respons");
 })
 
+function facebook_icon_active(){                    //facebook-icon
+  url="https://www.facebook.com/gmmclothesbrand.bd";
+  window.open(url , "_target")
+}
+let about_btn=document.getElementById("about-btn");    //id="about-btn"
+about_btn.addEventListener("click",function(){
+    let about_down_para =document.getElementById("about-down-para");
+    about_down_para.classList.toggle("down-para-active");
+})
+
 // ///////////////////// This is for Products ul
 // function prod_ul(){
 //     let prod_ul=document.getElementById("prod-ul") //id='prod-ul'
