@@ -1,0 +1,984 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100;1,100&family=Poppins:wght@300&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    font-size: 10px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+i{
+    cursor: pointer;
+}
+/* *********************Navigation var Start********************* */
+nav{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 0.3rem 0;
+}
+nav .in-nav{
+    width:90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+                                /* logo S */
+nav .in-nav .logo{
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .in-nav .logo img{
+ width:5rem;
+ height:5rem;
+ border-radius: 50%;
+ cursor: pointer;
+}
+nav .in-nav .logo h3{
+   font-size: 3rem;
+   text-align: center;
+   cursor: pointer;
+   margin-left: 0.5rem;
+}
+nav .in-nav .logo h3 .logo-s1{
+   color:#e74c3c;
+ }
+ nav .in-nav .logo h3 .logo-s2{
+    color:#1e90ff;
+ }
+ nav .in-nav .logo h3 .logo-s3{
+     color:#eccc68;
+ }
+                                /* logo E */
+
+                               /* Search S */ 
+nav .in-nav .ser{
+    width:40%;
+    position: relative;
+}
+nav .in-nav .ser input{
+    width: 100%;
+    height: 100%;
+    padding:0.5rem 1rem;
+    padding-left: 3.2rem;
+    border-radius: 50px;
+    outline: none;
+    background-color: transparent;
+}
+nav .in-nav .ser span{
+    position:absolute;
+    font-size: 1.3rem;
+    top:7px;
+    left:35px;
+    transition: all 0.3s ease-in-out;
+    cursor:text;
+    pointer-events: none;
+}
+nav .in-nav .ser input:focus ~ span{
+    top:-9px;
+    background-color: #fff;
+}
+nav .in-nav .ser .ser-btn i{
+    font-size: 2rem;
+    position: absolute;
+    left: 10px;
+    top:8px;
+    z-index: 10;
+    color: black;
+    cursor: pointer;
+}
+nav .in-nav .ser .ser-btn:focus ~ span{
+    top:-9px;
+    background-color: #fff;
+}
+
+                               /* Search E */ 
+
+                               /* Ul Start */
+nav .in-nav > ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+nav .in-nav ul > li:not(:last-child){
+    margin-right: 2rem;
+}
+nav .in-nav ul > li{
+    position: relative;
+    padding:0.5rem 1rem;
+}
+nav .in-nav ul li > a{
+    width: 100%;
+    height: 100%;
+    color:black;
+    text-decoration: none;
+    font-size: 1.8rem;
+    transition: background-color 0.3s linear;
+}
+nav .in-nav ul > li:hover{
+ background-color:#ecf0f1 ;
+ color:#000;
+}
+nav .in-nav ul li ul{
+    background-color: #fff;
+    position: absolute;
+    left: 0px;
+    top:38px;
+    z-index: 999;
+    height: 0px;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+}
+nav .in-nav ul li ul li{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .in-nav ul li ul li a{
+ text-align: left;
+}
+nav .in-nav ul li:hover ul{
+    height: auto;
+    visibility:visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+/* nav .in-nav ul li .prod-active{
+    height: auto;
+    visibility:visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+} */
+                               /* Ul E */ 
+
+                               /* manu-icon S */
+nav .in-nav .manu-icon{
+    display:none;
+    font-size: 2.8rem;
+}
+                               /* manu-icon E */
+/* *********************Navigation var End********************* */
+
+
+/* *********************Body Bannar Start********************* */
+.banar{
+    overflow: hidden;
+    width:100%;
+    height: 80vh;
+    background-image: url("homeimage/gmmbanar.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10rem;
+}
+.banar .content{
+    width:70%;
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+.banar .content .wrapper{
+    display: block;
+}
+.banar .content .wrapper .static-text{
+    color:#e74c3c;
+    font-size: 4rem;
+    font-weight: 400;
+}
+.banar .content .wrapper .dynamic-text{
+    overflow: hidden;
+}
+.banar .content .wrapper .dynamic-text li{
+     list-style: none;
+     color:#1e90ff;
+     font-size: 4rem;
+     font-weight: 500;
+     position: relative;
+}
+.banar .content .wrapper .dynamic-text li::after{
+    content: "";
+    position: absolute;
+    left:0px;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    border-left: 2px solid #1e90ff;
+    animation: typing 3s steps(18) infinite;
+}
+@keyframes typing {
+    40%,60%{
+         left:calc(100% + 30px)
+    }
+    100%{
+        left: 0;
+    }
+}
+.banar .content p{
+    width: 80%;
+    font-size: 1.5rem;
+}
+
+
+
+/* *********************Body Bannar End********************* */
+
+
+
+/* *********************Up icon Start********************* */
+.up-icon{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: fixed;
+    bottom: 120px;
+    right: 50px;
+    z-index: 999;
+}
+.up-icon::after{
+    content: "";
+    width: 95%;
+    height: 2px;
+    color: #000;
+    background-color: #000;
+    position: absolute;
+    bottom: 0px;
+}
+.up-icon::before{
+    content: "";
+    width: 95%;
+    height: 1px;
+    color: #000;
+    background-color: #000;
+    position: absolute;
+    bottom: -10px;
+}
+.up-icon a i{
+    font-size: 2.5rem;
+    color: #000;
+}
+
+/* *********************Up icon End********************* */
+
+
+/* *********************facebook icon Start********************* */
+.facebook-icon{
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    background-color: #fff;
+    width: 5.7rem;
+    height: 5.7rem;
+    border-radius: 50%;
+}
+.facebook-icon a i{
+    font-size: 6rem;
+    color:#1e90ff;
+ }
+/* *********************facebook icon End********************* */
+
+/* *********************Product Section Start********************* */
+.product{
+display: flex;
+flex-direction: column;
+padding:2rem 5rem;
+} 
+
+
+
+                           /* Product Heading */
+
+
+
+.product .heading{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+}
+.product .heading::after{
+    content: "";
+    width: 50%;
+    color: #000;
+    border: 1px solid #000;
+    background-color: #000;
+    position: absolute;
+    top:50%;
+    right: -55%;
+}
+.product .heading::before{
+    content: "";
+    width: 50%;
+    color: #000;
+    border: 1px solid #000;
+    background-color: #000;
+    position: absolute;
+    top:50%;
+    left: -55%;
+}
+
+                            /*  Card body  */
+
+
+
+
+.product .card-body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+                               /* Product Category */
+
+
+
+
+.product .card-body .product-category{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    width: fit-content;
+}
+
+                                 /* Main container */
+
+
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+
+                                     /* Product Container */
+
+
+
+.product .card-body .main-container .product-continer{
+    width: 23.5%;
+    height: 45rem;
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    margin-bottom: 3rem;
+    border: 1px solid #000;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 0.8rem;
+}
+.product .card-body .main-container  .product-continer:hover{
+    transform: scale(1.1);
+}
+
+
+                                   /* Product Image */
+
+
+.product .card-body .main-container  .product-continer .product-image{
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1rem;
+}
+.product .card-body .main-container  .product-continer .product-image img{
+    width: 100%;
+    height: 100%;
+}
+.product .card-body .main-container  .product-continer .product-image button{
+    position: absolute;
+    bottom:20px;
+    left: 30px;
+    width: 80%;
+    padding: 0.5rem ;
+    z-index: 999;
+    background-color:transparent ;
+    color: #fff;
+    border: 1px solid #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 50px;
+    transition: background-color 0.3s ease-in-out;
+}
+.product .card-body .main-container  .product-continer .product-image button:hover{
+    background-color:#1e90ff;
+}
+.product .card-body .main-container  .product-continer:hover button{
+   opacity: 1;
+}
+.product .card-body .main-container  .product-continer  .product-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 0.5rem;
+}
+
+
+
+                                   /* Product Info */
+
+
+
+.product .card-body .main-container  .product-continer  .product-info .product-info-left{
+    width: 70%;
+    font-size: 1.5rem;
+}
+.product .card-body .main-container  .product-continer  .product-info .product-info-right{
+    width: 30%;
+    font-size: 1.3rem;
+}
+.product .card-body .main-container  .product-continer  .product-info .product-info-right p:last-child{
+    font-size: 1rem;
+}
+
+
+                                     /* See All button */
+
+
+.product .card-body .main-container .see-all button{
+   padding:0.5rem 2rem;
+   background-color: #fff;
+   cursor: pointer;
+   border: 1px solid black;
+   transition-property: backgorund-color,color;
+   transition: 0.3s ease-in-out;
+}
+.product .card-body .main-container .see-all button:hover{
+    background-color: #000;
+    color: #fff;
+}
+        /* *********************Product Section End********************* */
+          /* *********************************Contect Section Start****************************************** */
+
+.contact-body{
+    background-color: #2c3e50;
+    width: 100%;
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.contact-body  .in-contact{
+    width: 90%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-body  .in-contact .heading{
+    text-align: center;
+    font-size: 1.5rem;
+    width: 70%;
+    margin-bottom: 3rem;
+} 
+.contact-body  .in-contact .heading h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.contact-body  .in-contact .heading p{
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+                          /* ***********Main Body************* */
+.contact-body  .in-contact .main-body{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+}                       /* ***********Main Body left************* */
+
+
+
+.contact-body  .in-contact .main-body .main-body-left{
+    width: 45%;
+}
+
+
+                          /* ***********icon-container************* */
+
+
+.contact-body  .in-contact .main-body .main-body-left .icon-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.contact-body  .in-contact .main-body .main-body-left .icon-container:not(:last-child){
+    margin-bottom: 3rem;
+}
+
+
+                          /* ***********icon************* */
+
+
+.contact-body  .in-contact .main-body .main-body-left .icon-container .icon{
+    width:4rem;
+    height:4rem;
+    background-color: #fff;
+    color: #000;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.contact-body  .in-contact .main-body .main-body-left .icon-container .icon i{
+    font-size: 2.3rem;
+}
+
+                          /* ***********Para************* */
+.contact-body  .in-contact .main-body .main-body-left .icon-container .para{
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+.contact-body  .in-contact .main-body .main-body-left .icon-container .para h4{
+    color:#1e90ff;
+}
+
+
+                          /* *****************Form****************** */
+
+
+.contact-body  .in-contact .main-body form{
+       width: 45%;
+       padding: 3rem;
+       background-color: #fff;
+       color: #000;
+}
+.contact-body  .in-contact .main-body form h2{
+  font-size: 3rem;
+  font-weight: 500;
+  color: #000;
+}
+
+                          /* *****************Input Box****************** */
+.contact-body  .in-contact .main-body form .input-box{
+    margin-top: 1rem;
+    width: 100%;
+    position: relative;
+}
+.contact-body  .in-contact .main-body form .input-box input , textarea{
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    margin:1rem 0 ;
+    border: none;
+    border-bottom:2px solid #000 ;
+    outline: none;
+    resize: none;
+}
+.contact-body  .in-contact .main-body form .input-box span{
+    position: absolute;
+    left: 0;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    margin:1rem 0 ;
+    pointer-events: none;
+    transition: 0.5s;
+    color:#666;
+}
+.contact-body  .in-contact .main-body form .input-box input:focus ~ span,
+.contact-body  .in-contact .main-body form .input-box input:valid ~ span{
+    font-size: 1.2rem;
+    color:#e91963;
+    transform: translateY(-20px);
+}
+.contact-body  .in-contact .main-body form .input-box textarea:focus ~ span,
+.contact-body  .in-contact .main-body form .input-box textarea:valid ~ span{
+    font-size: 1.2rem;
+    color:#e91963;
+    transform: translateY(-20px);
+}
+.contact-body  .in-contact .main-body form .submit-btn-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+                          /* *****************Submit Button****************** */
+
+
+.contact-body  .in-contact .main-body form .input-box input[type="submit"]{
+    width: 90%;
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1.5rem;
+    transition: all 0.3s linear;
+}
+.contact-body  .in-contact .main-body form .input-box input[type="submit"]:hover{
+    background-color: transparent;
+    outline: 1px solid #000;
+    color: #000;
+}
+
+        /* *********************************Contect Section End****************************************** */
+
+
+        /* *********************About us start********************* */
+
+.about-container{
+    width: 100%;
+    padding: 4rem;
+    overflow: hidden;
+}
+.about-container .heading{
+    width: fit-content;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    color:#badc58;
+    margin: auto;
+    position: relative;
+}
+.about-container .heading::after{
+    content: " ";
+     width: 60%;
+     border: 1px solid #badc58;
+     background-color: #badc58;
+     color: #badc58;
+     position: absolute;
+     bottom: 0px;
+     right: 20%;
+}
+.about-container .body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 3rem;
+}
+.about-container .body .para{
+    width:70%;
+    text-align: center;
+    overflow: hidden;
+}
+.about-container .body .para .in-para{
+    font-size: 1.5rem;
+}
+.about-container .body .para button{
+    font-size: 1.6rem;
+    margin: 2rem 0rem;
+    background-color: #badc58;
+    color:#fff;
+    padding: 0.5rem 2.3rem;
+    border: none;
+    border-radius: 25px;
+    height: auto;
+}
+.about-container .body .para .down-para{
+    visibility: hidden;
+    height: 0;
+    transition: height 0.5s ease-in-out;
+}
+.about-container .body .para .down-para-active{
+    color: #000;
+    height: auto;
+    visibility: visible;
+}
+.social-media{
+    padding: 0.5rem;
+    overflow: hidden;
+    margin-top: 5rem;
+    margin: auto;
+    width: 100%;
+}
+.social-media h2{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem ;
+}
+.social-media .social-media-icon{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 15rem;
+    font-size: 3rem;
+    color:#ff6b6b;
+}
+/* *********************About Us End********************* */
+
+
+ /* **********************footer start********************* */
+
+ footer{
+    width:100%;
+    padding: 1.5rem;
+    background-color: #222f3e;
+ }
+ footer p{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+ }
+  /* **********************footer End********************* */
+
+/* ************************************************************************************************************************** */
+/* ****************************************************Media Query Start***************************************************** */
+/* ************************************************************************************************************************** */
+   
+                          /* ********************* min-width: 1201px ********************* */
+/* @media screen and (min-width:1201px){
+    
+} */
+
+                         /* ********************* max-width: 1200px ********************* */
+@media screen and (max-width:1200px){
+    nav .in-nav .ser{
+        width:33%;
+        position: relative;
+    }
+    .product .card-body .main-container .product-continer{
+        width: 30%;
+    }
+
+}
+
+                        /* ********************* max-width: 1024px ********************* */
+@media screen and (max-width:1024px){
+    nav .in-nav > ul{
+        background-color: #fff;
+        padding: 1rem;
+        display:block;
+        position: absolute;
+        top:56px;
+        right: 0px;
+        width: 100%;
+        transform: translateX(-100%);
+        transition: all 0.3s linear;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 999;
+    }
+    nav .in-nav .ul-respons{
+        transform: translateX(0%);
+        opacity: 0.9;
+        visibility: visible;
+        transition: transform 0.3s linear;
+    }
+    nav .in-nav ul > li{
+        width: 100%;
+    }
+    nav .in-nav ul li a{
+        display: block;
+        width: 100%;
+        text-align: right;
+    }
+    nav .in-nav ul li:not(:last-child){
+        margin-bottom: 2rem;
+    }
+    nav .in-nav ul li a{
+        text-align: center;
+    }
+    nav .in-nav .manu-icon{
+        display: inline;
+    }
+    nav .in-nav .ser{
+        width:50%;
+        position: relative;
+    }
+    nav .in-nav ul li ul{
+        background-color: #fff;
+        position: absolute;
+        top:38px;
+        left:58%;
+        z-index: 999;
+        height: 0px;
+        width: 30%;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .contact-body  .in-contact .main-body .main-body-left{
+        width: 40%;
+    }
+    .contact-body{
+        padding: 3rem 0rem;
+    }
+    
+    .contact-body  .in-contact{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:950px){
+    .product .card-body .main-container{
+        justify-content: space-around;
+    }
+    .product .card-body .main-container .product-continer{
+        width: 40%;
+        height: 44rem;
+    }
+}
+
+
+                        /* ********************* max-width: 768px ********************* */
+@media screen and (max-width:768px){
+    nav .in-nav ul li ul{
+        left:64%;
+    }
+    .banar .content{
+        width: 92%;
+    }
+    .banar{
+        background-size: cover;
+        padding: 2rem;
+    }
+    .product {
+       padding: 2rem 2rem;
+    }
+    .product .heading::after{
+        width: 23%;
+        right: -27%;
+    }
+    .product .heading::before{
+        width: 23%;
+        left: -27%;
+    }
+    
+    .product .card-body .main-container .product-continer{
+        width: 47%;
+        height: 40rem;
+    }
+    .contact-body{
+        padding: 3rem 2rem;
+    }
+    
+    .contact-body  .in-contact{
+        width: 95%;
+    }
+    .contact-body  .in-contact .heading{
+        width: 80%;
+    } 
+    .contact-body  .in-contact .main-body{
+        justify-content: center;
+      
+      }  
+    .contact-body  .in-contact .main-body .main-body-left{
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+    .contact-body  .in-contact .main-body form{
+        width: 100%;
+    }
+    .about-container .body .para{
+        width:80%;
+    }
+
+}
+
+                        /* ********************* max-width: 480px ********************* */
+@media screen and (max-width:480px){
+    nav .content{
+        width: 95%;
+        justify-content: space-between;
+    }
+    nav .in-nav .logo{
+        margin-bottom: 1.5rem;
+        width: 100%;
+    }
+    nav .in-nav .ser{
+        width:80%;
+        position: relative;
+    }
+    nav .in-nav ul{
+        top:110px;
+    }
+    nav .in-nav ul li ul{
+        left:70%;
+    }
+    .banar{
+        background-size: cover;
+    }
+    .banar .content{
+        width: 95%;
+    }
+    .banar{
+        padding-left: 1.5rem;
+    }
+    .banar .content .wrapper .static-text{
+        color:#e74c3c;
+        font-size: 2.5rem;
+        font-weight: 400;
+    }
+    .banar .content .wrapper .dynamic-text li{
+        font-size: 2.5rem;
+    }
+    .product .heading{
+        text-align: center;
+        font-size: 2rem;
+    }
+    .product .heading::after{
+        width: 20%;
+        right: -25%;
+    }
+    .product .heading::before{
+        width: 20%;
+        left: -25%;
+    }
+    .product .card-body .product-category{
+        font-size: 2rem;
+    }
+   .product .card-body .main-container .product-continer{
+    width: 90%;
+    height: 40rem;
+   }
+   .contact-body{
+    padding: 3rem 0rem;
+   }
+
+   .contact-body  .in-contact{
+    width: 100%;
+    }
+    .about-container .body .para{
+        width:90%;
+    }
+
+}
+/* ************************************************************************************************************************** */
+/* *****************************************************Media Query End****************************************************** */
+/* ************************************************************************************************************************** */
