@@ -7,7 +7,7 @@
 
 let logo_head=document.getElementById("logo-head"); // id="logo-head"
 logo_head.addEventListener("click",function(){
-    let url="home.html";
+    let url="index.html";
     window.open(url,"_self")
  })
 
