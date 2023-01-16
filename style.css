@@ -324,7 +324,7 @@ padding:2rem 5rem;
 .product .heading::after{
     content: "";
     width: 50%;
-    color: #000;
+    color: rgb(0, 0, 0);
     border: 1px solid #000;
     background-color: #000;
     position: absolute;
@@ -509,18 +509,18 @@ padding:2rem 5rem;
     align-items: center;
 }
 
-.contact-body  .in-contact .heading{
+.contact-body  .in-contact .cheading{
     text-align: center;
     font-size: 1.5rem;
     width: 70%;
     margin-bottom: 3rem;
 } 
-.contact-body  .in-contact .heading h2{
+.contact-body  .in-contact .cheading h2{
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
-.contact-body  .in-contact .heading p{
+.contact-body  .in-contact .cheading p{
     text-align: center;
     font-size: 1.3rem;
 }
