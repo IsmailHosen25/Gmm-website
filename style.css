@@ -252,28 +252,34 @@ nav .in-nav .manu-icon{
     bottom: 120px;
     right: 50px;
     z-index: 999;
+    opacity: 0.7;
 }
 .up-icon::after{
     content: "";
-    width: 95%;
-    height: 2px;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 25px;
     color: #000;
     background-color: #000;
     position: absolute;
-    bottom: 0px;
+    bottom: 2px;
+    opacity: 0.9;
 }
 .up-icon::before{
     content: "";
-    width: 95%;
-    height: 1px;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 25px;
     color: #000;
     background-color: #000;
     position: absolute;
-    bottom: -10px;
+    bottom: -8px;
+    opacity: 0.9;
 }
 .up-icon a i{
     font-size: 2.5rem;
     color: #000;
+    opacity: 1;
 }
 
 /* *********************Up icon End********************* */
