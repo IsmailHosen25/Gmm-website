@@ -46,6 +46,11 @@ function pantsbtn(){
 }
 
 
+/////////////////////// buy btn
+function buybtn(){
+    alert("Sorry, This is not ready for use");
+};
+
 
 
 // ///////////////////// This is for Products ul
