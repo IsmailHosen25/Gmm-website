@@ -27,6 +27,27 @@ about_btn.addEventListener("click",function(){
     about_down_para.classList.toggle("down-para-active");
 })
 
+////////////////////////////// for see all button
+function panjabibtn(){
+    url="panjabi.html";
+    window.open(url),"_terget";
+}
+function tshirtbtn(){
+    url="tshirt.html";
+    window.open(url),"_terget";
+}
+function shirtbtn(){
+    url="shirt.html";
+    window.open(url),"_terget";
+}
+function pantsbtn(){
+    url="pants.html";
+    window.open(url),"_terget";
+}
+
+
+
+
 // ///////////////////// This is for Products ul
 // function prod_ul(){
 //     let prod_ul=document.getElementById("prod-ul") //id='prod-ul'
